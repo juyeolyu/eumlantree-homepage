@@ -115,3 +115,7 @@ h1{line-height:1.28;letter-spacing:-.055em}
 @media(max-width:760px){.brand-mark{height:62px;max-width:72px}.footer-brand img{height:76px;max-width:88px}}
 @media(max-width:640px){.brand-mark{height:58px;max-width:66px}.footer-brand img{height:68px;max-width:80px}.brand{gap:9px}.footer-brand{gap:13px}}
 @media(max-width:640px){.work-photo-picker-shell{padding:0}.work-photo-picker-heading{padding:7px 10px;gap:8px}.work-photo-picker-heading strong{font-size:10px}.work-photo-picker-hint{font-size:9px}.work-picker-arrow{width:30px;height:38px}.work-picker-arrow.prev{left:5px}.work-picker-arrow.next{right:5px}.work-photo-picker-shell .work-photo-picker{height:116px;padding-top:16px;padding-bottom:16px;padding-left:max(46px,calc(50% - 44px));padding-right:max(46px,calc(50% - 44px));scroll-padding-inline:calc(50% - 44px);gap:12px}.work-photo-picker-shell .work-photo-picker button{flex-basis:88px;width:88px;height:72px}}
+/* Full-width divider above the fifth service card. */
+.service-card:nth-child(5){position:relative;border-top:0}
+.service-card:nth-child(5)::before{content:"";position:absolute;top:0;left:0;width:400%;border-top:1px solid var(--darkline)}
+@media(max-width:900px){.service-card:nth-child(5)::before{width:200%}}
