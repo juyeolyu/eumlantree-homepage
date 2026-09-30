@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "이음랜트리는 상업공간 네트워크공사와 사무실 랜공사를 전문으로 합니다. 유선·무선 네트워크 구축, 통신실 장비 구성, 케이블 정리 및 PC·OA 통합 유지보수를 지원합니다.",
   alternates: { canonical: "/" },
   verification: {
-    other: { "naver-site-verification": "61e82e304ffadac200caa9dd1609d0ed2cfcec91" },
+    other: { "naver-site-verification": ["61e82e304ffadac200caa9dd1609d0ed2cfcec91", "3fb0d2420dd9478642190cd8f3ba4f6f574a0b1e"] },
   },
   robots: { index: true, follow: true },
   openGraph: {
