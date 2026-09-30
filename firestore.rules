@@ -3,7 +3,7 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function isStaff() {
       return request.auth != null
-        && request.auth.token.phone_number in ['+821042433383', '+821020387459'];
+        && request.auth.token.email == 'eum@eumlantree.com';
     }
 
     match /inquiries/{inquiryId} {
