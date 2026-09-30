@@ -119,3 +119,7 @@ h1{line-height:1.28;letter-spacing:-.055em}
 .service-card:nth-child(5){position:relative;border-top:0}
 .service-card:nth-child(5)::before{content:"";position:absolute;top:0;left:0;width:400%;border-top:1px solid var(--darkline)}
 @media(max-width:900px){.service-card:nth-child(5)::before{width:200%}}
+
+
+/* Remove the outside right divider from service card four. */
+.service-card:nth-child(4){border-right:0}
