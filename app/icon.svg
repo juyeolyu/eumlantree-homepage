@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 161 161">
-  <defs>
-    <filter id="brand-invert" color-interpolation-filters="sRGB">
-      <feColorMatrix values=".2126 .7152 .0722 0 0 .2126 .7152 .0722 0 0 .2126 .7152 .0722 0 0 0 0 0 1 0"/>
-      <feComponentTransfer>
-        <feFuncR type="discrete" tableValues="1 0"/><feFuncG type="discrete" tableValues="1 0"/><feFuncB type="discrete" tableValues="1 0"/>
-      </feComponentTransfer>
-      <feColorMatrix values="0 0 0 0 .06 0 0 0 0 .11 0 0 0 0 .31 0 0 0 1 0"/>
-    </filter>
-  </defs>
-  <image width="161" height="161" preserveAspectRatio="none" filter="url(#brand-invert)" href="https://blogpfthumb-phinf.pstatic.net/MjAyNTAxMjBfMjQ5/MDAxNzM3MzQ1MDQwMDQ2.Jq8tQpr_c1qpbL08OEeTHvDD61ZtaH7xg19oRNRwqlwg.3C0XdC4o7LiPJPtUrspDJwVU_eGi85ryTl2ALBGzwVMg.JPEG/%EB%A1%9C%EA%B3%A0%28%EB%84%A4%EC%9D%B4%EB%B9%84%29.jpg/%25EB%25A1%259C%25EA%25B3%25A0%2528%25EB%2584%25A4%25EC%259D%B4%25EB%25B9%2584%2529.jpg?type=w161"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <circle cx="64" cy="64" r="57" fill="#F4F6FC" stroke="#405FBA" stroke-width="4"/>
+  <g stroke="#405FBA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M64 94V48M64 67 43 48M64 59l21-20M64 80 45 76M64 77l20-8M64 48 53 35M64 49l11-13"/>
+  </g>
+  <g fill="#405FBA">
+    <circle cx="43" cy="48" r="5"/><circle cx="85" cy="39" r="5"/>
+    <circle cx="45" cy="76" r="5"/><circle cx="84" cy="69" r="5"/>
+    <circle cx="53" cy="35" r="5"/><circle cx="75" cy="36" r="5"/>
+    <circle cx="64" cy="94" r="5"/>
+  </g>
 </svg>
