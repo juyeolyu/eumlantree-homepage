@@ -63,7 +63,7 @@ export default function ContactDialog() {
             <input id="inquiry-phone" name="phone" autoComplete="tel" inputMode="tel" placeholder="010-1234-5678" maxLength={30} required />
             <label htmlFor="inquiry-message">문의 내용</label>
             <textarea id="inquiry-message" name="message" rows={5} maxLength={4000} placeholder="공간과 필요한 네트워크 작업을 적어주세요." required />
-            <label className="consent-row"><input type="checkbox" name="consent" required /><span>문의 응대를 위해 이름, 전화번호, 문의 내용을 수집·이용하는 데 동의합니다. 정보는 Firebase에 저장되어 상담에 사용됩니다.</span></label>
+            <label className="consent-row"><input type="checkbox" name="consent" required /><span>문의 응대를 위해 이름, 전화번호, 문의 내용을 수집·이용하는 데 동의합니다. 정보는 Firebase에 저장되고 회사 담당자에게 이메일로 접수 알림이 전달됩니다.</span></label>
             {error && <p className="form-error" role="alert">{error}</p>}
             <button className="dialog-submit" type="submit" disabled={state === "sending"}>{state === "sending" ? "접수 중…" : "문의 접수하기"}</button>
           </form>
@@ -73,5 +73,3 @@ export default function ContactDialog() {
     document.body,
   );
 }
-
-

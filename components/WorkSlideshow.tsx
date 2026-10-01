@@ -80,15 +80,27 @@ export default function WorkSlideshow() {
         if (Array.isArray(data.photos)) setPhotos(data.photos);
       }
     } catch { /* Ignore an invalid or unavailable browser cache. */ }
-    fetch("/api/blog/photos", { cache: "no-store" })
-      .then((response) => { if (!response.ok) throw new Error("사진을 불러오지 못했습니다."); return response.json(); })
-      .then((data: { photos?: Photo[] }) => { if (alive) {
-        const nextPhotos = data.photos ?? [];
-        setPhotos(nextPhotos);
-        try { localStorage.setItem(PHOTOS_CACHE_KEY, JSON.stringify({ photos: nextPhotos })); } catch { /* Storage can be disabled or full. */ }
-      } })
-      .catch(() => { /* Keep the last successful photos in state when Naver is temporarily unavailable. */ });
-    return () => { alive = false; };
+    const loadPhotos = async () => {
+      try {
+        const response = await fetch("/api/blog/photos", { cache: "no-store" });
+        if (!response.ok) throw new Error("사진을 불러오지 못했습니다.");
+        const data = await response.json() as { photos?: Photo[] };
+        if (alive) {
+          const nextPhotos = Array.isArray(data.photos) ? data.photos : [];
+          setPhotos(nextPhotos);
+          try { localStorage.setItem(PHOTOS_CACHE_KEY, JSON.stringify({ photos: nextPhotos })); } catch { /* Storage can be disabled or full. */ }
+        }
+      } catch { /* Keep the last successful photos when Naver is temporarily unavailable. */ }
+    };
+    void loadPhotos();
+    const timer = window.setInterval(() => { void loadPhotos(); }, 15 * 60 * 1000);
+    const onVisible = () => { if (!document.hidden) void loadPhotos(); };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      alive = false;
+      window.clearInterval(timer);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
   }, []);
 
   const companies = useMemo(() => groupByCompany(posts), [posts]);
