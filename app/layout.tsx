@@ -7,9 +7,9 @@ const siteUrl = "https://eumlantree.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: [{ url: "/api/favicon", type: "image/png", sizes: "256x256" }],
-    shortcut: ["/api/favicon"],
-    apple: [{ url: "/api/favicon", type: "image/png", sizes: "256x256" }],
+    icon: [{ url: `${siteUrl}/api/favicon`, type: "image/png", sizes: "256x256" }],
+    shortcut: [`${siteUrl}/api/favicon`],
+    apple: [{ url: `${siteUrl}/api/favicon`, type: "image/png", sizes: "256x256" }],
   },
   title: "이음랜트리 EUMLANTREE | 상업공간 네트워크·사무실 랜공사",
   description: "이음랜트리는 상업공간 네트워크공사와 사무실 랜공사를 전문으로 합니다. 유선·무선 네트워크 구축, 통신실 장비 구성, 케이블 정리 및 PC·OA 통합 유지보수를 지원합니다.",
